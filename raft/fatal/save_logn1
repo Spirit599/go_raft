@@ -1,0 +1,1233 @@
+warning: only one CPU, which may conceal locking bugs
+Test (2A): initial election ...
+2022/09/22 12:33:54 id = 0 voteforme
+2022/09/22 12:33:54 id = 0 get 1
+2022/09/22 12:33:54 id = 2 RequestVote Lock
+2022/09/22 12:33:54 2 rece 0
+2022/09/22 12:33:54 id = 2 setNewTerm 1
+2022/09/22 12:33:54 2 vote to 0
+2022/09/22 12:33:54 id = 0 callRequestVote Lock
+2022/09/22 12:33:54 im 0 leader
+2022/09/22 12:33:54 id = 1 voteforme
+2022/09/22 12:33:54 id = 1 get 1
+2022/09/22 12:33:54 id = 2 RequestVote Lock
+2022/09/22 12:33:54 2 rece 1
+2022/09/22 12:33:54 2 no vote to 1
+2022/09/22 12:33:54 id = 1 callRequestVote Lock
+2022/09/22 12:33:54 id = 1 RequestVote Lock
+2022/09/22 12:33:54 1 rece 0
+2022/09/22 12:33:54 1 no vote to 0
+2022/09/22 12:33:54 id = 0 callRequestVote Lock
+2022/09/22 12:33:54 id = 0 RequestVote Lock
+2022/09/22 12:33:54 0 rece 1
+2022/09/22 12:33:54 0 no vote to 1
+2022/09/22 12:33:54 id = 1 callRequestVote Lock
+2022/09/22 12:33:54 id = 0 GetState Lock
+2022/09/22 12:33:54 id = 1 GetState Lock
+2022/09/22 12:33:54 id = 2 GetState Lock
+2022/09/22 12:33:54 id = 0 GetState Lock
+2022/09/22 12:33:54 id = 1 GetState Lock
+2022/09/22 12:33:54 id = 2 GetState Lock
+2022/09/22 12:33:55 id 1 get heartbeat from 0
+2022/09/22 12:33:55 id 2 get heartbeat from 0
+2022/09/22 12:33:56 id 1 get heartbeat from 0
+2022/09/22 12:33:56 id = 0 GetState Lock
+2022/09/22 12:33:56 id = 1 GetState Lock
+2022/09/22 12:33:56 id = 2 GetState Lock
+2022/09/22 12:33:56 id 1 get heartbeat from 0
+2022/09/22 12:33:57 id = 0 GetState Lock
+2022/09/22 12:33:57 id = 1 GetState Lock
+2022/09/22 12:33:57 id = 2 GetState Lock
+  ... Passed --   3.0  3   52   14550    0
+2022/09/22 12:33:57 0 killed
+2022/09/22 12:33:57 1 killed
+2022/09/22 12:33:57 2 killed
+Test (2A): election after network failure ...
+2022/09/22 12:33:57 id = 0 voteforme
+2022/09/22 12:33:57 id = 0 get 1
+2022/09/22 12:33:57 id = 2 RequestVote Lock
+2022/09/22 12:33:57 2 rece 0
+2022/09/22 12:33:57 id = 2 setNewTerm 1
+2022/09/22 12:33:57 2 vote to 0
+2022/09/22 12:33:57 id = 0 callRequestVote Lock
+2022/09/22 12:33:57 im 0 leader
+2022/09/22 12:33:57 id = 1 RequestVote Lock
+2022/09/22 12:33:57 1 rece 0
+2022/09/22 12:33:57 id = 1 setNewTerm 1
+2022/09/22 12:33:57 1 vote to 0
+2022/09/22 12:33:57 id = 0 callRequestVote Lock
+2022/09/22 12:33:57 id 1 get heartbeat from 0
+2022/09/22 12:33:57 id = 0 GetState Lock
+2022/09/22 12:33:57 id = 1 GetState Lock
+2022/09/22 12:33:57 id = 2 GetState Lock
+2022/09/22 12:33:58 id = 2 voteforme
+2022/09/22 12:33:58 id = 2 get 1
+2022/09/22 12:33:58 id = 1 RequestVote Lock
+2022/09/22 12:33:58 1 rece 2
+2022/09/22 12:33:58 id = 1 setNewTerm 2
+2022/09/22 12:33:58 1 vote to 2
+2022/09/22 12:33:58 id = 2 callRequestVote Lock
+2022/09/22 12:33:58 im 2 leader
+2022/09/22 12:33:58 id = 1 GetState Lock
+2022/09/22 12:33:58 id = 2 GetState Lock
+2022/09/22 12:33:58 id = 0 setNewTerm 2
+2022/09/22 12:33:58 id 0 get heartbeat from 2
+2022/09/22 12:33:58 id = 0 GetState Lock
+2022/09/22 12:33:58 id = 1 GetState Lock
+2022/09/22 12:33:58 id = 2 GetState Lock
+2022/09/22 12:33:59 id = 0 voteforme
+2022/09/22 12:33:59 id = 0 get 1
+2022/09/22 12:33:59 id = 1 voteforme
+2022/09/22 12:33:59 id = 1 get 1
+2022/09/22 12:33:59 id = 1 voteforme
+2022/09/22 12:33:59 id = 1 get 1
+2022/09/22 12:33:59 id = 0 voteforme
+2022/09/22 12:33:59 id = 0 get 1
+2022/09/22 12:34:00 id = 0 voteforme
+2022/09/22 12:34:00 id = 0 get 1
+2022/09/22 12:34:00 id = 1 voteforme
+2022/09/22 12:34:00 id = 1 get 1
+2022/09/22 12:34:00 id = 1 callRequestVote Lock
+2022/09/22 12:34:00 id = 1 voteforme
+2022/09/22 12:34:00 id = 1 get 1
+2022/09/22 12:34:00 id = 0 voteforme
+2022/09/22 12:34:00 id = 0 get 1
+2022/09/22 12:34:00 id = 1 GetState Lock
+2022/09/22 12:34:00 id = 1 voteforme
+2022/09/22 12:34:00 id = 1 get 1
+2022/09/22 12:34:00 id = 0 RequestVote Lock
+2022/09/22 12:34:00 0 rece 1
+2022/09/22 12:34:00 id = 0 setNewTerm 7
+2022/09/22 12:34:00 0 vote to 1
+2022/09/22 12:34:00 id = 1 callRequestVote Lock
+2022/09/22 12:34:00 im 1 leader
+2022/09/22 12:34:01 id = 0 GetState Lock
+2022/09/22 12:34:01 id = 1 GetState Lock
+2022/09/22 12:34:01 id = 0 callRequestVote Lock
+2022/09/22 12:34:01 id = 2 setNewTerm 7
+2022/09/22 12:34:01 id 0 get heartbeat from 1
+2022/09/22 12:34:01 id = 1 callRequestVote Lock
+2022/09/22 12:34:01 id = 0 GetState Lock
+2022/09/22 12:34:01 id = 1 GetState Lock
+2022/09/22 12:34:01 id = 2 GetState Lock
+  ... Passed --   4.5  3  108   23840    0
+2022/09/22 12:34:01 0 killed
+2022/09/22 12:34:01 1 killed
+2022/09/22 12:34:01 2 killed
+Test (2A): multiple elections ...
+2022/09/22 12:34:01 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 5 voteforme
+2022/09/22 12:34:02 id = 5 get 1
+2022/09/22 12:34:02 id = 6 RequestVote Lock
+2022/09/22 12:34:02 6 rece 5
+2022/09/22 12:34:02 id = 6 setNewTerm 1
+2022/09/22 12:34:02 6 vote to 5
+2022/09/22 12:34:02 id = 5 callRequestVote Lock
+2022/09/22 12:34:02 id = 0 voteforme
+2022/09/22 12:34:02 id = 0 get 1
+2022/09/22 12:34:02 id = 6 RequestVote Lock
+2022/09/22 12:34:02 6 rece 0
+2022/09/22 12:34:02 6 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 1 voteforme
+2022/09/22 12:34:02 id = 1 get 1
+2022/09/22 12:34:02 id = 6 RequestVote Lock
+2022/09/22 12:34:02 6 rece 1
+2022/09/22 12:34:02 6 no vote to 1
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:02 id = 2 voteforme
+2022/09/22 12:34:02 id = 2 get 1
+2022/09/22 12:34:02 id = 6 RequestVote Lock
+2022/09/22 12:34:02 6 rece 2
+2022/09/22 12:34:02 6 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 0 RequestVote Lock
+2022/09/22 12:34:02 0 rece 5
+2022/09/22 12:34:02 0 no vote to 5
+2022/09/22 12:34:02 id = 5 callRequestVote Lock
+2022/09/22 12:34:02 id = 1 RequestVote Lock
+2022/09/22 12:34:02 1 rece 5
+2022/09/22 12:34:02 1 no vote to 5
+2022/09/22 12:34:02 id = 5 callRequestVote Lock
+2022/09/22 12:34:02 id = 2 RequestVote Lock
+2022/09/22 12:34:02 2 rece 5
+2022/09/22 12:34:02 2 no vote to 5
+2022/09/22 12:34:02 id = 5 callRequestVote Lock
+2022/09/22 12:34:02 id = 3 RequestVote Lock
+2022/09/22 12:34:02 3 rece 5
+2022/09/22 12:34:02 id = 3 setNewTerm 1
+2022/09/22 12:34:02 3 vote to 5
+2022/09/22 12:34:02 id = 5 callRequestVote Lock
+2022/09/22 12:34:02 id = 4 RequestVote Lock
+2022/09/22 12:34:02 4 rece 5
+2022/09/22 12:34:02 id = 4 setNewTerm 1
+2022/09/22 12:34:02 4 vote to 5
+2022/09/22 12:34:02 id = 5 callRequestVote Lock
+2022/09/22 12:34:02 im 5 leader
+2022/09/22 12:34:02 id = 1 RequestVote Lock
+2022/09/22 12:34:02 1 rece 0
+2022/09/22 12:34:02 1 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 2 RequestVote Lock
+2022/09/22 12:34:02 2 rece 0
+2022/09/22 12:34:02 2 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 3 RequestVote Lock
+2022/09/22 12:34:02 3 rece 0
+2022/09/22 12:34:02 3 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 4 RequestVote Lock
+2022/09/22 12:34:02 4 rece 0
+2022/09/22 12:34:02 4 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 5 RequestVote Lock
+2022/09/22 12:34:02 5 rece 0
+2022/09/22 12:34:02 5 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 0 RequestVote Lock
+2022/09/22 12:34:02 0 rece 1
+2022/09/22 12:34:02 0 no vote to 1
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:02 id = 2 RequestVote Lock
+2022/09/22 12:34:02 2 rece 1
+2022/09/22 12:34:02 2 no vote to 1
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:02 id = 3 RequestVote Lock
+2022/09/22 12:34:02 3 rece 1
+2022/09/22 12:34:02 3 no vote to 1
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:02 id = 4 RequestVote Lock
+2022/09/22 12:34:02 4 rece 1
+2022/09/22 12:34:02 4 no vote to 1
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:02 id = 5 RequestVote Lock
+2022/09/22 12:34:02 5 rece 1
+2022/09/22 12:34:02 5 no vote to 1
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:02 id = 0 RequestVote Lock
+2022/09/22 12:34:02 0 rece 2
+2022/09/22 12:34:02 0 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 1 RequestVote Lock
+2022/09/22 12:34:02 1 rece 2
+2022/09/22 12:34:02 1 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 3 RequestVote Lock
+2022/09/22 12:34:02 3 rece 2
+2022/09/22 12:34:02 3 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 4 RequestVote Lock
+2022/09/22 12:34:02 4 rece 2
+2022/09/22 12:34:02 4 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 5 RequestVote Lock
+2022/09/22 12:34:02 5 rece 2
+2022/09/22 12:34:02 5 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id 2 get heartbeat from 5
+2022/09/22 12:34:02 id = 0 GetState Lock
+2022/09/22 12:34:02 id = 1 GetState Lock
+2022/09/22 12:34:02 id = 2 GetState Lock
+2022/09/22 12:34:02 id = 3 GetState Lock
+2022/09/22 12:34:02 id = 4 GetState Lock
+2022/09/22 12:34:02 id = 5 GetState Lock
+2022/09/22 12:34:02 id = 6 GetState Lock
+2022/09/22 12:34:02 id = 6 voteforme
+2022/09/22 12:34:02 id = 6 get 1
+2022/09/22 12:34:02 id = 0 voteforme
+2022/09/22 12:34:02 id = 0 get 1
+2022/09/22 12:34:02 id = 6 RequestVote Lock
+2022/09/22 12:34:02 6 rece 0
+2022/09/22 12:34:02 6 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 2 voteforme
+2022/09/22 12:34:02 id = 2 get 1
+2022/09/22 12:34:02 id = 6 RequestVote Lock
+2022/09/22 12:34:02 6 rece 2
+2022/09/22 12:34:02 6 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 3 voteforme
+2022/09/22 12:34:02 id = 3 get 1
+2022/09/22 12:34:02 id = 4 voteforme
+2022/09/22 12:34:02 id = 4 get 1
+2022/09/22 12:34:02 id = 0 RequestVote Lock
+2022/09/22 12:34:02 0 rece 6
+2022/09/22 12:34:02 0 no vote to 6
+2022/09/22 12:34:02 id = 6 callRequestVote Lock
+2022/09/22 12:34:02 id = 1 RequestVote Lock
+2022/09/22 12:34:02 1 rece 6
+2022/09/22 12:34:02 id = 1 setNewTerm 2
+2022/09/22 12:34:02 1 vote to 6
+2022/09/22 12:34:02 id = 2 RequestVote Lock
+2022/09/22 12:34:02 2 rece 6
+2022/09/22 12:34:02 2 no vote to 6
+2022/09/22 12:34:02 id = 6 callRequestVote Lock
+2022/09/22 12:34:02 id = 1 RequestVote Lock
+2022/09/22 12:34:02 1 rece 0
+2022/09/22 12:34:02 1 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 2 RequestVote Lock
+2022/09/22 12:34:02 2 rece 0
+2022/09/22 12:34:02 2 no vote to 0
+2022/09/22 12:34:02 id = 0 callRequestVote Lock
+2022/09/22 12:34:02 id = 0 RequestVote Lock
+2022/09/22 12:34:02 0 rece 2
+2022/09/22 12:34:02 0 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 1 RequestVote Lock
+2022/09/22 12:34:02 1 rece 2
+2022/09/22 12:34:02 1 no vote to 2
+2022/09/22 12:34:02 id = 2 callRequestVote Lock
+2022/09/22 12:34:02 id = 6 callRequestVote Lock
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:02 id = 4 callRequestVote Lock
+2022/09/22 12:34:02 id = 0 GetState Lock
+2022/09/22 12:34:02 id = 1 GetState Lock
+2022/09/22 12:34:02 id = 2 GetState Lock
+2022/09/22 12:34:02 id = 6 GetState Lock
+2022/09/22 12:34:02 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 3 voteforme
+2022/09/22 12:34:03 id = 3 get 1
+2022/09/22 12:34:03 id = 4 voteforme
+2022/09/22 12:34:03 id = 4 get 1
+2022/09/22 12:34:03 id = 0 voteforme
+2022/09/22 12:34:03 id = 0 get 1
+2022/09/22 12:34:03 id = 6 RequestVote Lock
+2022/09/22 12:34:03 6 rece 0
+2022/09/22 12:34:03 id = 6 setNewTerm 3
+2022/09/22 12:34:03 6 vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 voteforme
+2022/09/22 12:34:03 id = 1 get 1
+2022/09/22 12:34:03 id = 6 RequestVote Lock
+2022/09/22 12:34:03 6 rece 1
+2022/09/22 12:34:03 6 no vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 RequestVote Lock
+2022/09/22 12:34:03 0 rece 1
+2022/09/22 12:34:03 0 no vote to 1
+2022/09/22 12:34:03 id = 2 RequestVote Lock
+2022/09/22 12:34:03 2 rece 1
+2022/09/22 12:34:03 id = 2 setNewTerm 3
+2022/09/22 12:34:03 2 vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 RequestVote Lock
+2022/09/22 12:34:03 1 rece 0
+2022/09/22 12:34:03 1 no vote to 0
+2022/09/22 12:34:03 id = 2 RequestVote Lock
+2022/09/22 12:34:03 2 rece 0
+2022/09/22 12:34:03 2 no vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 3 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 GetState Lock
+2022/09/22 12:34:03 id = 1 GetState Lock
+2022/09/22 12:34:03 id = 2 GetState Lock
+2022/09/22 12:34:03 id = 6 GetState Lock
+2022/09/22 12:34:03 id = 6 voteforme
+2022/09/22 12:34:03 id = 6 get 1
+2022/09/22 12:34:03 id = 0 voteforme
+2022/09/22 12:34:03 id = 0 get 1
+2022/09/22 12:34:03 id = 6 RequestVote Lock
+2022/09/22 12:34:03 6 rece 0
+2022/09/22 12:34:03 6 no vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 voteforme
+2022/09/22 12:34:03 id = 1 get 1
+2022/09/22 12:34:03 id = 6 RequestVote Lock
+2022/09/22 12:34:03 6 rece 1
+2022/09/22 12:34:03 6 no vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 RequestVote Lock
+2022/09/22 12:34:03 0 rece 6
+2022/09/22 12:34:03 0 no vote to 6
+2022/09/22 12:34:03 id = 6 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 RequestVote Lock
+2022/09/22 12:34:03 1 rece 6
+2022/09/22 12:34:03 1 no vote to 6
+2022/09/22 12:34:03 id = 6 callRequestVote Lock
+2022/09/22 12:34:03 id = 2 RequestVote Lock
+2022/09/22 12:34:03 2 rece 6
+2022/09/22 12:34:03 id = 2 setNewTerm 4
+2022/09/22 12:34:03 2 vote to 6
+2022/09/22 12:34:03 id = 6 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 RequestVote Lock
+2022/09/22 12:34:03 1 rece 0
+2022/09/22 12:34:03 1 no vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 2 RequestVote Lock
+2022/09/22 12:34:03 2 rece 0
+2022/09/22 12:34:03 2 no vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 RequestVote Lock
+2022/09/22 12:34:03 0 rece 1
+2022/09/22 12:34:03 0 no vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 2 RequestVote Lock
+2022/09/22 12:34:03 2 rece 1
+2022/09/22 12:34:03 2 no vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 4 voteforme
+2022/09/22 12:34:03 id = 4 get 1
+2022/09/22 12:34:03 id = 3 voteforme
+2022/09/22 12:34:03 id = 3 get 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 4 callRequestVote Lock
+2022/09/22 12:34:03 id = 3 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 GetState Lock
+2022/09/22 12:34:03 id = 1 GetState Lock
+2022/09/22 12:34:03 id = 2 GetState Lock
+2022/09/22 12:34:03 id = 6 GetState Lock
+2022/09/22 12:34:03 id = 3 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 3 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 voteforme
+2022/09/22 12:34:03 id = 1 get 1
+2022/09/22 12:34:03 id = 6 RequestVote Lock
+2022/09/22 12:34:03 6 rece 1
+2022/09/22 12:34:03 id = 6 setNewTerm 5
+2022/09/22 12:34:03 6 vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 2 voteforme
+2022/09/22 12:34:03 id = 2 get 1
+2022/09/22 12:34:03 id = 6 RequestVote Lock
+2022/09/22 12:34:03 6 rece 2
+2022/09/22 12:34:03 6 no vote to 2
+2022/09/22 12:34:03 id = 2 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 voteforme
+2022/09/22 12:34:03 id = 0 get 1
+2022/09/22 12:34:03 id = 6 RequestVote Lock
+2022/09/22 12:34:03 6 rece 0
+2022/09/22 12:34:03 6 no vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 RequestVote Lock
+2022/09/22 12:34:03 0 rece 1
+2022/09/22 12:34:03 0 no vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 2 RequestVote Lock
+2022/09/22 12:34:03 2 rece 1
+2022/09/22 12:34:03 2 no vote to 1
+2022/09/22 12:34:03 id = 1 callRequestVote Lock
+2022/09/22 12:34:03 id = 0 RequestVote Lock
+2022/09/22 12:34:03 0 rece 2
+2022/09/22 12:34:03 0 no vote to 2
+2022/09/22 12:34:03 id = 2 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 RequestVote Lock
+2022/09/22 12:34:03 1 rece 2
+2022/09/22 12:34:03 1 no vote to 2
+2022/09/22 12:34:03 id = 2 callRequestVote Lock
+2022/09/22 12:34:03 id = 1 RequestVote Lock
+2022/09/22 12:34:03 1 rece 0
+2022/09/22 12:34:03 1 no vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:03 id = 2 RequestVote Lock
+2022/09/22 12:34:03 2 rece 0
+2022/09/22 12:34:03 2 no vote to 0
+2022/09/22 12:34:03 id = 0 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 callRequestVote Lock
+2022/09/22 12:34:04 id = 3 callRequestVote Lock
+2022/09/22 12:34:04 id = 3 voteforme
+2022/09/22 12:34:04 id = 3 get 1
+2022/09/22 12:34:04 id = 4 voteforme
+2022/09/22 12:34:04 id = 4 get 1
+2022/09/22 12:34:04 id = 1 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 GetState Lock
+2022/09/22 12:34:04 id = 1 GetState Lock
+2022/09/22 12:34:04 id = 2 GetState Lock
+2022/09/22 12:34:04 id = 6 GetState Lock
+2022/09/22 12:34:04 id = 3 callRequestVote Lock
+2022/09/22 12:34:04 id = 1 voteforme
+2022/09/22 12:34:04 id = 1 get 1
+2022/09/22 12:34:04 id = 6 RequestVote Lock
+2022/09/22 12:34:04 6 rece 1
+2022/09/22 12:34:04 id = 6 setNewTerm 6
+2022/09/22 12:34:04 6 vote to 1
+2022/09/22 12:34:04 id = 1 callRequestVote Lock
+2022/09/22 12:34:04 id = 2 voteforme
+2022/09/22 12:34:04 id = 2 get 1
+2022/09/22 12:34:04 id = 6 RequestVote Lock
+2022/09/22 12:34:04 6 rece 2
+2022/09/22 12:34:04 6 no vote to 2
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 RequestVote Lock
+2022/09/22 12:34:04 0 rece 1
+2022/09/22 12:34:04 id = 0 setNewTerm 6
+2022/09/22 12:34:04 0 vote to 1
+2022/09/22 12:34:04 id = 1 callRequestVote Lock
+2022/09/22 12:34:04 id = 2 RequestVote Lock
+2022/09/22 12:34:04 2 rece 1
+2022/09/22 12:34:04 2 no vote to 1
+2022/09/22 12:34:04 id = 1 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 RequestVote Lock
+2022/09/22 12:34:04 0 rece 2
+2022/09/22 12:34:04 0 no vote to 2
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 1 RequestVote Lock
+2022/09/22 12:34:04 1 rece 2
+2022/09/22 12:34:04 1 no vote to 2
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 callRequestVote Lock
+2022/09/22 12:34:04 id = 4 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 callRequestVote Lock
+2022/09/22 12:34:04 id = 3 voteforme
+2022/09/22 12:34:04 id = 3 get 1
+2022/09/22 12:34:04 id = 4 voteforme
+2022/09/22 12:34:04 id = 4 get 1
+2022/09/22 12:34:04 id = 1 callRequestVote Lock
+2022/09/22 12:34:04 id = 1 callRequestVote Lock
+2022/09/22 12:34:04 id = 0 GetState Lock
+2022/09/22 12:34:04 id = 1 GetState Lock
+2022/09/22 12:34:04 id = 2 GetState Lock
+2022/09/22 12:34:04 id = 6 GetState Lock
+2022/09/22 12:34:04 id = 2 voteforme
+2022/09/22 12:34:04 id = 2 get 1
+2022/09/22 12:34:04 id = 6 RequestVote Lock
+2022/09/22 12:34:04 6 rece 2
+2022/09/22 12:34:04 id = 6 setNewTerm 7
+2022/09/22 12:34:04 6 vote to 2
+2022/09/22 12:34:04 id = 0 RequestVote Lock
+2022/09/22 12:34:04 0 rece 2
+2022/09/22 12:34:04 id = 0 setNewTerm 7
+2022/09/22 12:34:04 0 vote to 2
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 1 RequestVote Lock
+2022/09/22 12:34:04 1 rece 2
+2022/09/22 12:34:04 id = 1 setNewTerm 7
+2022/09/22 12:34:04 1 vote to 2
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 im 2 leader
+2022/09/22 12:34:04 id = 6 callRequestVote Lock
+2022/09/22 12:34:04 id = 4 callRequestVote Lock
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:04 id = 4 callRequestVote Lock
+2022/09/22 12:34:04 id = 2 callRequestVote Lock
+2022/09/22 12:34:05 id 0 get heartbeat from 2
+2022/09/22 12:34:05 id = 4 callRequestVote Lock
+2022/09/22 12:34:05 id = 0 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 voteforme
+2022/09/22 12:34:05 id = 3 get 1
+2022/09/22 12:34:05 id = 4 voteforme
+2022/09/22 12:34:05 id = 4 get 1
+2022/09/22 12:34:05 id = 0 callRequestVote Lock
+2022/09/22 12:34:05 id = 0 GetState Lock
+2022/09/22 12:34:05 id = 1 GetState Lock
+2022/09/22 12:34:05 id = 2 GetState Lock
+2022/09/22 12:34:05 id = 6 GetState Lock
+2022/09/22 12:34:05 id = 4 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 callRequestVote Lock
+2022/09/22 12:34:05 id = 5 setNewTerm 7
+2022/09/22 12:34:05 id 3 get heartbeat from 5
+2022/09/22 12:34:05 id = 4 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 callRequestVote Lock
+2022/09/22 12:34:05 id = 0 callRequestVote Lock
+2022/09/22 12:34:05 id = 2 callRequestVote Lock
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:05 id = 4 voteforme
+2022/09/22 12:34:05 id = 4 get 1
+2022/09/22 12:34:05 id = 4 callRequestVote Lock
+2022/09/22 12:34:05 id = 4 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 callRequestVote Lock
+2022/09/22 12:34:05 id = 0 voteforme
+2022/09/22 12:34:05 id = 0 get 1
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:05 id = 6 voteforme
+2022/09/22 12:34:05 id = 6 get 1
+2022/09/22 12:34:05 id = 5 RequestVote Lock
+2022/09/22 12:34:05 5 rece 6
+2022/09/22 12:34:05 id = 5 setNewTerm 8
+2022/09/22 12:34:05 5 vote to 6
+2022/09/22 12:34:05 id = 6 callRequestVote Lock
+2022/09/22 12:34:05 id = 1 voteforme
+2022/09/22 12:34:05 id = 1 get 1
+2022/09/22 12:34:05 id = 6 RequestVote Lock
+2022/09/22 12:34:05 6 rece 1
+2022/09/22 12:34:05 6 no vote to 1
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:05 id = 1 RequestVote Lock
+2022/09/22 12:34:05 1 rece 6
+2022/09/22 12:34:05 1 no vote to 6
+2022/09/22 12:34:05 id = 6 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 RequestVote Lock
+2022/09/22 12:34:05 3 rece 6
+2022/09/22 12:34:05 id = 3 setNewTerm 8
+2022/09/22 12:34:05 3 vote to 6
+2022/09/22 12:34:05 id = 6 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 RequestVote Lock
+2022/09/22 12:34:05 3 rece 1
+2022/09/22 12:34:05 3 no vote to 1
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:05 id = 5 RequestVote Lock
+2022/09/22 12:34:05 5 rece 1
+2022/09/22 12:34:05 5 no vote to 1
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 callRequestVote Lock
+2022/09/22 12:34:05 id = 6 callRequestVote Lock
+2022/09/22 12:34:05 id = 1 GetState Lock
+2022/09/22 12:34:05 id = 3 GetState Lock
+2022/09/22 12:34:05 id = 5 GetState Lock
+2022/09/22 12:34:05 id = 6 GetState Lock
+2022/09/22 12:34:05 id = 4 callRequestVote Lock
+2022/09/22 12:34:05 id = 0 callRequestVote Lock
+2022/09/22 12:34:05 id = 3 callRequestVote Lock
+2022/09/22 12:34:05 id = 4 callRequestVote Lock
+2022/09/22 12:34:05 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 4 voteforme
+2022/09/22 12:34:06 id = 4 get 1
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 3 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 6 voteforme
+2022/09/22 12:34:06 id = 6 get 1
+2022/09/22 12:34:06 id = 5 RequestVote Lock
+2022/09/22 12:34:06 5 rece 6
+2022/09/22 12:34:06 id = 5 setNewTerm 9
+2022/09/22 12:34:06 5 vote to 6
+2022/09/22 12:34:06 id = 6 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 RequestVote Lock
+2022/09/22 12:34:06 1 rece 6
+2022/09/22 12:34:06 id = 1 setNewTerm 9
+2022/09/22 12:34:06 1 vote to 6
+2022/09/22 12:34:06 id = 6 callRequestVote Lock
+2022/09/22 12:34:06 id = 3 RequestVote Lock
+2022/09/22 12:34:06 3 rece 6
+2022/09/22 12:34:06 id = 3 setNewTerm 9
+2022/09/22 12:34:06 3 vote to 6
+2022/09/22 12:34:06 id = 6 callRequestVote Lock
+2022/09/22 12:34:06 im 6 leader
+2022/09/22 12:34:06 id = 0 voteforme
+2022/09/22 12:34:06 id = 0 get 1
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 6 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 GetState Lock
+2022/09/22 12:34:06 id = 3 GetState Lock
+2022/09/22 12:34:06 id = 5 GetState Lock
+2022/09/22 12:34:06 id = 6 GetState Lock
+2022/09/22 12:34:06 id = 2 setNewTerm 9
+2022/09/22 12:34:06 id = 3 callRequestVote Lock
+2022/09/22 12:34:06 id = 6 callRequestVote Lock
+2022/09/22 12:34:06 id = 2 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 3 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 3 callRequestVote Lock
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 0 callRequestVote Lock
+2022/09/22 12:34:06 id = 4 voteforme
+2022/09/22 12:34:06 id = 4 get 1
+2022/09/22 12:34:06 id = 0 callRequestVote Lock
+2022/09/22 12:34:06 id = 0 callRequestVote Lock
+2022/09/22 12:34:06 id = 3 voteforme
+2022/09/22 12:34:06 id = 3 get 1
+2022/09/22 12:34:06 id = 3 callRequestVote Lock
+2022/09/22 12:34:06 id = 3 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 voteforme
+2022/09/22 12:34:06 id = 1 get 1
+2022/09/22 12:34:06 id = 5 voteforme
+2022/09/22 12:34:06 id = 5 get 1
+2022/09/22 12:34:06 id = 2 voteforme
+2022/09/22 12:34:06 id = 2 get 1
+2022/09/22 12:34:06 id = 0 RequestVote Lock
+2022/09/22 12:34:06 0 rece 1
+2022/09/22 12:34:06 id = 0 setNewTerm 10
+2022/09/22 12:34:06 0 vote to 1
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 2 RequestVote Lock
+2022/09/22 12:34:06 2 rece 1
+2022/09/22 12:34:06 2 no vote to 1
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 5 RequestVote Lock
+2022/09/22 12:34:06 5 rece 1
+2022/09/22 12:34:06 5 no vote to 1
+2022/09/22 12:34:06 id = 1 callRequestVote Lock
+2022/09/22 12:34:06 id = 0 RequestVote Lock
+2022/09/22 12:34:06 0 rece 5
+2022/09/22 12:34:06 0 no vote to 5
+2022/09/22 12:34:06 id = 5 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 RequestVote Lock
+2022/09/22 12:34:06 1 rece 5
+2022/09/22 12:34:06 1 no vote to 5
+2022/09/22 12:34:06 id = 5 callRequestVote Lock
+2022/09/22 12:34:06 id = 2 RequestVote Lock
+2022/09/22 12:34:06 2 rece 5
+2022/09/22 12:34:06 2 no vote to 5
+2022/09/22 12:34:06 id = 5 callRequestVote Lock
+2022/09/22 12:34:06 id = 0 RequestVote Lock
+2022/09/22 12:34:06 0 rece 2
+2022/09/22 12:34:06 0 no vote to 2
+2022/09/22 12:34:06 id = 2 callRequestVote Lock
+2022/09/22 12:34:06 id = 1 RequestVote Lock
+2022/09/22 12:34:06 1 rece 2
+2022/09/22 12:34:06 1 no vote to 2
+2022/09/22 12:34:06 id = 2 callRequestVote Lock
+2022/09/22 12:34:06 id = 5 RequestVote Lock
+2022/09/22 12:34:06 5 rece 2
+2022/09/22 12:34:06 5 no vote to 2
+2022/09/22 12:34:06 id = 2 callRequestVote Lock
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 0 GetState Lock
+2022/09/22 12:34:06 id = 1 GetState Lock
+2022/09/22 12:34:06 id = 2 GetState Lock
+2022/09/22 12:34:06 id = 5 GetState Lock
+2022/09/22 12:34:06 id = 4 callRequestVote Lock
+2022/09/22 12:34:06 id = 5 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 voteforme
+2022/09/22 12:34:07 id = 4 get 1
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 callRequestVote Lock
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:07 id = 6 callRequestVote Lock
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 voteforme
+2022/09/22 12:34:07 id = 0 get 1
+2022/09/22 12:34:07 id = 3 voteforme
+2022/09/22 12:34:07 id = 3 get 1
+2022/09/22 12:34:07 id = 2 voteforme
+2022/09/22 12:34:07 id = 2 get 1
+2022/09/22 12:34:07 id = 1 RequestVote Lock
+2022/09/22 12:34:07 1 rece 0
+2022/09/22 12:34:07 id = 1 setNewTerm 11
+2022/09/22 12:34:07 1 vote to 0
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 2 RequestVote Lock
+2022/09/22 12:34:07 2 rece 0
+2022/09/22 12:34:07 2 no vote to 0
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 5 RequestVote Lock
+2022/09/22 12:34:07 5 rece 0
+2022/09/22 12:34:07 id = 5 setNewTerm 11
+2022/09/22 12:34:07 5 vote to 0
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 RequestVote Lock
+2022/09/22 12:34:07 0 rece 2
+2022/09/22 12:34:07 0 no vote to 2
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 RequestVote Lock
+2022/09/22 12:34:07 1 rece 2
+2022/09/22 12:34:07 1 no vote to 2
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 5 RequestVote Lock
+2022/09/22 12:34:07 5 rece 2
+2022/09/22 12:34:07 5 no vote to 2
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 GetState Lock
+2022/09/22 12:34:07 id = 1 GetState Lock
+2022/09/22 12:34:07 id = 2 GetState Lock
+2022/09/22 12:34:07 id = 5 GetState Lock
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 voteforme
+2022/09/22 12:34:07 id = 4 get 1
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 voteforme
+2022/09/22 12:34:07 id = 0 get 1
+2022/09/22 12:34:07 id = 3 voteforme
+2022/09/22 12:34:07 id = 3 get 1
+2022/09/22 12:34:07 id = 2 voteforme
+2022/09/22 12:34:07 id = 2 get 1
+2022/09/22 12:34:07 id = 1 voteforme
+2022/09/22 12:34:07 id = 1 get 1
+2022/09/22 12:34:07 id = 5 voteforme
+2022/09/22 12:34:07 id = 5 get 1
+2022/09/22 12:34:07 id = 1 RequestVote Lock
+2022/09/22 12:34:07 1 rece 0
+2022/09/22 12:34:07 1 no vote to 0
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 2 RequestVote Lock
+2022/09/22 12:34:07 2 rece 0
+2022/09/22 12:34:07 2 no vote to 0
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 5 RequestVote Lock
+2022/09/22 12:34:07 5 rece 0
+2022/09/22 12:34:07 5 no vote to 0
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 RequestVote Lock
+2022/09/22 12:34:07 0 rece 2
+2022/09/22 12:34:07 0 no vote to 2
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 RequestVote Lock
+2022/09/22 12:34:07 1 rece 2
+2022/09/22 12:34:07 1 no vote to 2
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 5 RequestVote Lock
+2022/09/22 12:34:07 5 rece 2
+2022/09/22 12:34:07 5 no vote to 2
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 RequestVote Lock
+2022/09/22 12:34:07 0 rece 1
+2022/09/22 12:34:07 0 no vote to 1
+2022/09/22 12:34:07 id = 2 RequestVote Lock
+2022/09/22 12:34:07 2 rece 1
+2022/09/22 12:34:07 2 no vote to 1
+2022/09/22 12:34:07 id = 1 callRequestVote Lock
+2022/09/22 12:34:07 id = 5 RequestVote Lock
+2022/09/22 12:34:07 5 rece 1
+2022/09/22 12:34:07 5 no vote to 1
+2022/09/22 12:34:07 id = 1 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 RequestVote Lock
+2022/09/22 12:34:07 0 rece 5
+2022/09/22 12:34:07 0 no vote to 5
+2022/09/22 12:34:07 id = 5 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 RequestVote Lock
+2022/09/22 12:34:07 1 rece 5
+2022/09/22 12:34:07 1 no vote to 5
+2022/09/22 12:34:07 id = 5 callRequestVote Lock
+2022/09/22 12:34:07 id = 2 RequestVote Lock
+2022/09/22 12:34:07 2 rece 5
+2022/09/22 12:34:07 2 no vote to 5
+2022/09/22 12:34:07 id = 5 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 6 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 GetState Lock
+2022/09/22 12:34:07 id = 1 GetState Lock
+2022/09/22 12:34:07 id = 2 GetState Lock
+2022/09/22 12:34:07 id = 5 GetState Lock
+2022/09/22 12:34:07 id = 2 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 voteforme
+2022/09/22 12:34:07 id = 4 get 1
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:07 id = 1 callRequestVote Lock
+2022/09/22 12:34:07 id = 0 callRequestVote Lock
+2022/09/22 12:34:07 id = 4 callRequestVote Lock
+2022/09/22 12:34:07 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 voteforme
+2022/09/22 12:34:08 id = 2 get 1
+2022/09/22 12:34:08 id = 5 voteforme
+2022/09/22 12:34:08 id = 5 get 1
+2022/09/22 12:34:08 id = 0 voteforme
+2022/09/22 12:34:08 id = 0 get 1
+2022/09/22 12:34:08 id = 0 RequestVote Lock
+2022/09/22 12:34:08 0 rece 2
+2022/09/22 12:34:08 0 no vote to 2
+2022/09/22 12:34:08 id = 2 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 RequestVote Lock
+2022/09/22 12:34:08 1 rece 2
+2022/09/22 12:34:08 id = 1 setNewTerm 13
+2022/09/22 12:34:08 1 vote to 2
+2022/09/22 12:34:08 id = 2 callRequestVote Lock
+2022/09/22 12:34:08 id = 5 RequestVote Lock
+2022/09/22 12:34:08 5 rece 2
+2022/09/22 12:34:08 5 no vote to 2
+2022/09/22 12:34:08 id = 2 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 RequestVote Lock
+2022/09/22 12:34:08 0 rece 5
+2022/09/22 12:34:08 0 no vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 RequestVote Lock
+2022/09/22 12:34:08 1 rece 5
+2022/09/22 12:34:08 1 no vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 RequestVote Lock
+2022/09/22 12:34:08 2 rece 5
+2022/09/22 12:34:08 2 no vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 RequestVote Lock
+2022/09/22 12:34:08 1 rece 0
+2022/09/22 12:34:08 1 no vote to 0
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 RequestVote Lock
+2022/09/22 12:34:08 2 rece 0
+2022/09/22 12:34:08 2 no vote to 0
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 5 RequestVote Lock
+2022/09/22 12:34:08 5 rece 0
+2022/09/22 12:34:08 5 no vote to 0
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 voteforme
+2022/09/22 12:34:08 id = 3 get 1
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 GetState Lock
+2022/09/22 12:34:08 id = 1 GetState Lock
+2022/09/22 12:34:08 id = 2 GetState Lock
+2022/09/22 12:34:08 id = 5 GetState Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 voteforme
+2022/09/22 12:34:08 id = 4 get 1
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 6 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 voteforme
+2022/09/22 12:34:08 id = 1 get 1
+2022/09/22 12:34:08 id = 5 voteforme
+2022/09/22 12:34:08 id = 5 get 1
+2022/09/22 12:34:08 id = 0 RequestVote Lock
+2022/09/22 12:34:08 0 rece 1
+2022/09/22 12:34:08 id = 0 setNewTerm 14
+2022/09/22 12:34:08 0 vote to 1
+2022/09/22 12:34:08 id = 1 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 RequestVote Lock
+2022/09/22 12:34:08 2 rece 1
+2022/09/22 12:34:08 id = 2 setNewTerm 14
+2022/09/22 12:34:08 2 vote to 1
+2022/09/22 12:34:08 id = 1 callRequestVote Lock
+2022/09/22 12:34:08 id = 5 RequestVote Lock
+2022/09/22 12:34:08 5 rece 1
+2022/09/22 12:34:08 5 no vote to 1
+2022/09/22 12:34:08 id = 0 RequestVote Lock
+2022/09/22 12:34:08 0 rece 5
+2022/09/22 12:34:08 0 no vote to 5
+2022/09/22 12:34:08 id = 1 RequestVote Lock
+2022/09/22 12:34:08 1 rece 5
+2022/09/22 12:34:08 1 no vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 RequestVote Lock
+2022/09/22 12:34:08 2 rece 5
+2022/09/22 12:34:08 2 no vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 callRequestVote Lock
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 voteforme
+2022/09/22 12:34:08 id = 3 get 1
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 GetState Lock
+2022/09/22 12:34:08 id = 1 GetState Lock
+2022/09/22 12:34:08 id = 2 GetState Lock
+2022/09/22 12:34:08 id = 5 GetState Lock
+2022/09/22 12:34:08 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 voteforme
+2022/09/22 12:34:08 id = 4 get 1
+2022/09/22 12:34:08 id = 2 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 3 callRequestVote Lock
+2022/09/22 12:34:08 id = 4 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 5 voteforme
+2022/09/22 12:34:08 id = 5 get 1
+2022/09/22 12:34:08 id = 0 voteforme
+2022/09/22 12:34:08 id = 0 get 1
+2022/09/22 12:34:08 id = 1 voteforme
+2022/09/22 12:34:08 id = 1 get 1
+2022/09/22 12:34:08 id = 0 RequestVote Lock
+2022/09/22 12:34:08 0 rece 5
+2022/09/22 12:34:08 0 no vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 RequestVote Lock
+2022/09/22 12:34:08 1 rece 5
+2022/09/22 12:34:08 1 no vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 RequestVote Lock
+2022/09/22 12:34:08 2 rece 5
+2022/09/22 12:34:08 id = 2 setNewTerm 15
+2022/09/22 12:34:08 2 vote to 5
+2022/09/22 12:34:08 id = 5 callRequestVote Lock
+2022/09/22 12:34:08 id = 1 RequestVote Lock
+2022/09/22 12:34:08 1 rece 0
+2022/09/22 12:34:08 1 no vote to 0
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 RequestVote Lock
+2022/09/22 12:34:08 2 rece 0
+2022/09/22 12:34:08 2 no vote to 0
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 5 RequestVote Lock
+2022/09/22 12:34:08 5 rece 0
+2022/09/22 12:34:08 5 no vote to 0
+2022/09/22 12:34:08 id = 0 callRequestVote Lock
+2022/09/22 12:34:08 id = 0 RequestVote Lock
+2022/09/22 12:34:08 0 rece 1
+2022/09/22 12:34:08 0 no vote to 1
+2022/09/22 12:34:08 id = 1 callRequestVote Lock
+2022/09/22 12:34:08 id = 2 RequestVote Lock
+2022/09/22 12:34:08 2 rece 1
+2022/09/22 12:34:08 2 no vote to 1
+2022/09/22 12:34:08 id = 1 callRequestVote Lock
+2022/09/22 12:34:08 id = 5 RequestVote Lock
+2022/09/22 12:34:08 5 rece 1
+2022/09/22 12:34:08 5 no vote to 1
+2022/09/22 12:34:08 id = 1 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 6 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 GetState Lock
+2022/09/22 12:34:09 id = 1 GetState Lock
+2022/09/22 12:34:09 id = 2 GetState Lock
+2022/09/22 12:34:09 id = 5 GetState Lock
+2022/09/22 12:34:09 id = 3 voteforme
+2022/09/22 12:34:09 id = 3 get 1
+2022/09/22 12:34:09 id = 4 voteforme
+2022/09/22 12:34:09 id = 4 get 1
+2022/09/22 12:34:09 id = 6 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 callRequestVote Lock
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 2 voteforme
+2022/09/22 12:34:09 id = 2 get 1
+2022/09/22 12:34:09 id = 1 voteforme
+2022/09/22 12:34:09 id = 1 get 1
+2022/09/22 12:34:09 id = 0 RequestVote Lock
+2022/09/22 12:34:09 0 rece 2
+2022/09/22 12:34:09 id = 0 setNewTerm 16
+2022/09/22 12:34:09 0 vote to 2
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 1 RequestVote Lock
+2022/09/22 12:34:09 1 rece 2
+2022/09/22 12:34:09 1 no vote to 2
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 5 RequestVote Lock
+2022/09/22 12:34:09 5 rece 2
+2022/09/22 12:34:09 id = 5 setNewTerm 16
+2022/09/22 12:34:09 5 vote to 2
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 RequestVote Lock
+2022/09/22 12:34:09 0 rece 1
+2022/09/22 12:34:09 0 no vote to 1
+2022/09/22 12:34:09 id = 1 callRequestVote Lock
+2022/09/22 12:34:09 id = 2 RequestVote Lock
+2022/09/22 12:34:09 2 rece 1
+2022/09/22 12:34:09 2 no vote to 1
+2022/09/22 12:34:09 id = 1 callRequestVote Lock
+2022/09/22 12:34:09 id = 5 RequestVote Lock
+2022/09/22 12:34:09 5 rece 1
+2022/09/22 12:34:09 5 no vote to 1
+2022/09/22 12:34:09 id = 1 callRequestVote Lock
+2022/09/22 12:34:09 id = 6 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 callRequestVote Lock
+2022/09/22 12:34:09 id = 1 callRequestVote Lock
+2022/09/22 12:34:09 id = 1 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 1 callRequestVote Lock
+2022/09/22 12:34:09 id = 3 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 callRequestVote Lock
+2022/09/22 12:34:09 id = 3 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 GetState Lock
+2022/09/22 12:34:09 id = 1 GetState Lock
+2022/09/22 12:34:09 id = 2 GetState Lock
+2022/09/22 12:34:09 id = 5 GetState Lock
+2022/09/22 12:34:09 id = 3 voteforme
+2022/09/22 12:34:09 id = 3 get 1
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 callRequestVote Lock
+2022/09/22 12:34:09 id = 4 callRequestVote Lock
+2022/09/22 12:34:09 id = 3 callRequestVote Lock
+2022/09/22 12:34:09 id = 3 callRequestVote Lock
+2022/09/22 12:34:09 id = 5 voteforme
+2022/09/22 12:34:09 id = 5 get 1
+2022/09/22 12:34:09 id = 4 voteforme
+2022/09/22 12:34:09 id = 4 get 1
+2022/09/22 12:34:09 id = 2 voteforme
+2022/09/22 12:34:09 id = 2 get 1
+2022/09/22 12:34:09 id = 0 RequestVote Lock
+2022/09/22 12:34:09 0 rece 5
+2022/09/22 12:34:09 id = 0 setNewTerm 17
+2022/09/22 12:34:09 0 vote to 5
+2022/09/22 12:34:09 id = 5 callRequestVote Lock
+2022/09/22 12:34:09 id = 1 RequestVote Lock
+2022/09/22 12:34:09 1 rece 5
+2022/09/22 12:34:09 id = 1 setNewTerm 17
+2022/09/22 12:34:09 1 vote to 5
+2022/09/22 12:34:09 id = 5 callRequestVote Lock
+2022/09/22 12:34:09 id = 2 RequestVote Lock
+2022/09/22 12:34:09 2 rece 5
+2022/09/22 12:34:09 2 no vote to 5
+2022/09/22 12:34:09 id = 5 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 RequestVote Lock
+2022/09/22 12:34:09 0 rece 2
+2022/09/22 12:34:09 0 no vote to 2
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 1 RequestVote Lock
+2022/09/22 12:34:09 1 rece 2
+2022/09/22 12:34:09 1 no vote to 2
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 5 RequestVote Lock
+2022/09/22 12:34:09 5 rece 2
+2022/09/22 12:34:09 5 no vote to 2
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:09 id = 3 callRequestVote Lock
+2022/09/22 12:34:09 id = 3 callRequestVote Lock
+2022/09/22 12:34:09 id = 0 callRequestVote Lock
+2022/09/22 12:34:09 id = 5 callRequestVote Lock
+2022/09/22 12:34:09 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 GetState Lock
+2022/09/22 12:34:10 id = 1 GetState Lock
+2022/09/22 12:34:10 id = 2 GetState Lock
+2022/09/22 12:34:10 id = 5 GetState Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 1 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 voteforme
+2022/09/22 12:34:10 id = 0 get 1
+2022/09/22 12:34:10 id = 4 voteforme
+2022/09/22 12:34:10 id = 4 get 1
+2022/09/22 12:34:10 id = 3 voteforme
+2022/09/22 12:34:10 id = 3 get 1
+2022/09/22 12:34:10 id = 5 voteforme
+2022/09/22 12:34:10 id = 5 get 1
+2022/09/22 12:34:10 id = 1 RequestVote Lock
+2022/09/22 12:34:10 1 rece 0
+2022/09/22 12:34:10 id = 1 setNewTerm 18
+2022/09/22 12:34:10 1 vote to 0
+2022/09/22 12:34:10 id = 0 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 RequestVote Lock
+2022/09/22 12:34:10 2 rece 0
+2022/09/22 12:34:10 id = 2 setNewTerm 18
+2022/09/22 12:34:10 2 vote to 0
+2022/09/22 12:34:10 id = 5 RequestVote Lock
+2022/09/22 12:34:10 5 rece 0
+2022/09/22 12:34:10 5 no vote to 0
+2022/09/22 12:34:10 id = 0 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 RequestVote Lock
+2022/09/22 12:34:10 0 rece 5
+2022/09/22 12:34:10 0 no vote to 5
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 1 RequestVote Lock
+2022/09/22 12:34:10 1 rece 5
+2022/09/22 12:34:10 1 no vote to 5
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 RequestVote Lock
+2022/09/22 12:34:10 2 rece 5
+2022/09/22 12:34:10 2 no vote to 5
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 6 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 GetState Lock
+2022/09/22 12:34:10 id = 1 GetState Lock
+2022/09/22 12:34:10 id = 2 GetState Lock
+2022/09/22 12:34:10 id = 5 GetState Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 voteforme
+2022/09/22 12:34:10 id = 2 get 1
+2022/09/22 12:34:10 id = 3 voteforme
+2022/09/22 12:34:10 id = 3 get 1
+2022/09/22 12:34:10 id = 1 voteforme
+2022/09/22 12:34:10 id = 1 get 1
+2022/09/22 12:34:10 id = 5 voteforme
+2022/09/22 12:34:10 id = 5 get 1
+2022/09/22 12:34:10 id = 4 voteforme
+2022/09/22 12:34:10 id = 4 get 1
+2022/09/22 12:34:10 id = 0 RequestVote Lock
+2022/09/22 12:34:10 0 rece 2
+2022/09/22 12:34:10 id = 0 setNewTerm 19
+2022/09/22 12:34:10 0 vote to 2
+2022/09/22 12:34:10 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 1 RequestVote Lock
+2022/09/22 12:34:10 1 rece 2
+2022/09/22 12:34:10 1 no vote to 2
+2022/09/22 12:34:10 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 5 RequestVote Lock
+2022/09/22 12:34:10 5 rece 2
+2022/09/22 12:34:10 5 no vote to 2
+2022/09/22 12:34:10 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 RequestVote Lock
+2022/09/22 12:34:10 0 rece 1
+2022/09/22 12:34:10 0 no vote to 1
+2022/09/22 12:34:10 id = 1 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 RequestVote Lock
+2022/09/22 12:34:10 2 rece 1
+2022/09/22 12:34:10 2 no vote to 1
+2022/09/22 12:34:10 id = 1 callRequestVote Lock
+2022/09/22 12:34:10 id = 5 RequestVote Lock
+2022/09/22 12:34:10 5 rece 1
+2022/09/22 12:34:10 5 no vote to 1
+2022/09/22 12:34:10 id = 1 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 RequestVote Lock
+2022/09/22 12:34:10 0 rece 5
+2022/09/22 12:34:10 0 no vote to 5
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 1 RequestVote Lock
+2022/09/22 12:34:10 1 rece 5
+2022/09/22 12:34:10 1 no vote to 5
+2022/09/22 12:34:10 id = 2 RequestVote Lock
+2022/09/22 12:34:10 2 rece 5
+2022/09/22 12:34:10 2 no vote to 5
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 5 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 3 callRequestVote Lock
+2022/09/22 12:34:10 id = 1 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 callRequestVote Lock
+2022/09/22 12:34:10 id = 1 callRequestVote Lock
+2022/09/22 12:34:10 id = 4 callRequestVote Lock
+2022/09/22 12:34:10 id = 2 callRequestVote Lock
+2022/09/22 12:34:10 id = 0 callRequestVote Lock
+2022/09/22 12:34:11 id = 3 callRequestVote Lock
+2022/09/22 12:34:11 id = 3 callRequestVote Lock
+2022/09/22 12:34:11 id = 0 callRequestVote Lock
+2022/09/22 12:34:11 id = 4 callRequestVote Lock
+2022/09/22 12:34:11 id = 4 callRequestVote Lock
+2022/09/22 12:34:11 id = 0 GetState Lock
+2022/09/22 12:34:11 id = 1 GetState Lock
+2022/09/22 12:34:11 id = 2 GetState Lock
+2022/09/22 12:34:11 id = 5 GetState Lock
+2022/09/22 12:34:11 0 killed
+2022/09/22 12:34:11 1 killed
+2022/09/22 12:34:11 2 killed
+2022/09/22 12:34:11 3 killed
+2022/09/22 12:34:11 4 killed
+2022/09/22 12:34:11 5 killed
+2022/09/22 12:34:11 6 killed
+--- FAIL: TestManyElections2A (9.51s)
+    config.go:464: expected one leader, got none
+FAIL
+exit status 1
+FAIL	6.824/raft	17.061s

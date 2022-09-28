@@ -1,0 +1,934 @@
+warning: only one CPU, which may conceal locking bugs
+Test (2A): initial election ...
+2022/09/22 16:53:11 id = 2 long time no heartbeat
+2022/09/22 16:53:11 id = 2 voteforme
+2022/09/22 16:53:11 id = 1 RequestVote Lock
+2022/09/22 16:53:11 1 rece 2
+2022/09/22 16:53:11 id = 1 become follower setNewTerm 1
+2022/09/22 16:53:11 1 vote to 2
+2022/09/22 16:53:11 id = 2 callRequestVote Lock
+2022/09/22 16:53:11 im 2 leader
+2022/09/22 16:53:11 id = 0 RequestVote Lock
+2022/09/22 16:53:11 0 rece 2
+2022/09/22 16:53:11 id = 0 become follower setNewTerm 1
+2022/09/22 16:53:11 0 vote to 2
+2022/09/22 16:53:11 id = 2 callRequestVote Lock
+2022/09/22 16:53:12 id = 0 GetState Lock
+2022/09/22 16:53:12 id = 1 GetState Lock
+2022/09/22 16:53:12 id = 2 GetState Lock
+2022/09/22 16:53:12 leader is 2
+2022/09/22 16:53:12 id = 0 GetState Lock
+2022/09/22 16:53:12 id = 1 GetState Lock
+2022/09/22 16:53:12 id = 2 GetState Lock
+2022/09/22 16:53:12 id 0 get heartbeat from 2
+2022/09/22 16:53:12 id 0 get heartbeat from 2
+2022/09/22 16:53:13 id 0 get heartbeat from 2
+2022/09/22 16:53:14 id 1 get heartbeat from 2
+2022/09/22 16:53:14 id = 0 GetState Lock
+2022/09/22 16:53:14 id = 1 GetState Lock
+2022/09/22 16:53:14 id = 2 GetState Lock
+2022/09/22 16:53:14 id = 0 GetState Lock
+2022/09/22 16:53:14 id = 1 GetState Lock
+2022/09/22 16:53:14 id = 2 GetState Lock
+2022/09/22 16:53:14 leader is 2
+  ... Passed --   3.0  3   50   14336    0
+2022/09/22 16:53:14 0 killed
+2022/09/22 16:53:14 1 killed
+2022/09/22 16:53:14 2 killed
+Test (2A): election after network failure ...
+2022/09/22 16:53:15 id = 2 long time no heartbeat
+2022/09/22 16:53:15 id = 2 voteforme
+2022/09/22 16:53:15 id = 1 RequestVote Lock
+2022/09/22 16:53:15 1 rece 2
+2022/09/22 16:53:15 id = 1 become follower setNewTerm 1
+2022/09/22 16:53:15 1 vote to 2
+2022/09/22 16:53:15 id = 2 callRequestVote Lock
+2022/09/22 16:53:15 im 2 leader
+2022/09/22 16:53:15 id = 0 long time no heartbeat
+2022/09/22 16:53:15 id = 0 voteforme
+2022/09/22 16:53:15 id = 2 RequestVote Lock
+2022/09/22 16:53:15 2 rece 0
+2022/09/22 16:53:15 2 no vote to 0
+2022/09/22 16:53:15 id = 0 callRequestVote Lock
+2022/09/22 16:53:15 id = 0 RequestVote Lock
+2022/09/22 16:53:15 0 rece 2
+2022/09/22 16:53:15 0 no vote to 2
+2022/09/22 16:53:15 id = 2 callRequestVote Lock
+2022/09/22 16:53:15 id 0 get heartbeat from 2
+2022/09/22 16:53:15 id = 1 RequestVote Lock
+2022/09/22 16:53:15 1 rece 0
+2022/09/22 16:53:15 1 no vote to 0
+2022/09/22 16:53:15 id = 0 callRequestVote Lock
+2022/09/22 16:53:15 id = 0 GetState Lock
+2022/09/22 16:53:15 id = 1 GetState Lock
+2022/09/22 16:53:15 id = 2 GetState Lock
+2022/09/22 16:53:15 leader is 2
+2022/09/22 16:53:15 id = 0 long time no heartbeat
+2022/09/22 16:53:15 id = 0 voteforme
+2022/09/22 16:53:15 id = 1 long time no heartbeat
+2022/09/22 16:53:15 id = 1 voteforme
+2022/09/22 16:53:15 id = 1 RequestVote Lock
+2022/09/22 16:53:15 1 rece 0
+2022/09/22 16:53:15 1 no vote to 0
+2022/09/22 16:53:15 id = 0 callRequestVote Lock
+2022/09/22 16:53:15 id = 0 RequestVote Lock
+2022/09/22 16:53:15 0 rece 1
+2022/09/22 16:53:15 0 no vote to 1
+2022/09/22 16:53:15 id = 1 callRequestVote Lock
+2022/09/22 16:53:15 id = 0 callRequestVote Lock
+2022/09/22 16:53:15 id = 0 GetState Lock
+2022/09/22 16:53:15 id = 1 GetState Lock
+2022/09/22 16:53:15 id = 0 no one become lead
+2022/09/22 16:53:15 id = 0 voteforme
+2022/09/22 16:53:15 id = 1 RequestVote Lock
+2022/09/22 16:53:15 1 rece 0
+2022/09/22 16:53:15 id = 1 become follower setNewTerm 3
+2022/09/22 16:53:15 1 vote to 0
+2022/09/22 16:53:15 id = 0 callRequestVote Lock
+2022/09/22 16:53:15 im 0 leader
+2022/09/22 16:53:16 id = 0 GetState Lock
+2022/09/22 16:53:16 id = 1 GetState Lock
+2022/09/22 16:53:16 leader is 0
+2022/09/22 16:53:16 id = 2 become follower setNewTerm 3
+2022/09/22 16:53:16 id 2 get heartbeat from 0
+2022/09/22 16:53:16 id = 0 GetState Lock
+2022/09/22 16:53:16 id = 1 GetState Lock
+2022/09/22 16:53:16 id = 2 GetState Lock
+2022/09/22 16:53:16 leader is 0
+2022/09/22 16:53:16 id = 1 long time no heartbeat
+2022/09/22 16:53:16 id = 1 voteforme
+2022/09/22 16:53:16 id = 2 long time no heartbeat
+2022/09/22 16:53:16 id = 2 voteforme
+2022/09/22 16:53:17 id = 1 no one become lead
+2022/09/22 16:53:17 id = 1 voteforme
+2022/09/22 16:53:17 id = 2 no one become lead
+2022/09/22 16:53:17 id = 2 voteforme
+2022/09/22 16:53:17 id = 1 no one become lead
+2022/09/22 16:53:17 id = 1 voteforme
+2022/09/22 16:53:17 id = 2 no one become lead
+2022/09/22 16:53:17 id = 2 voteforme
+2022/09/22 16:53:17 id = 1 callRequestVote Lock
+2022/09/22 16:53:18 id = 1 callRequestVote Lock
+2022/09/22 16:53:18 id = 1 no one become lead
+2022/09/22 16:53:18 id = 1 voteforme
+2022/09/22 16:53:18 id = 2 no one become lead
+2022/09/22 16:53:18 id = 2 voteforme
+2022/09/22 16:53:18 id = 2 GetState Lock
+2022/09/22 16:53:18 id = 1 callRequestVote Lock
+2022/09/22 16:53:18 id = 1 no one become lead
+2022/09/22 16:53:18 id = 1 voteforme
+2022/09/22 16:53:18 id = 2 RequestVote Lock
+2022/09/22 16:53:18 2 rece 1
+2022/09/22 16:53:18 id = 2 become follower setNewTerm 8
+2022/09/22 16:53:18 2 vote to 1
+2022/09/22 16:53:18 id = 1 callRequestVote Lock
+2022/09/22 16:53:18 im 1 leader
+2022/09/22 16:53:18 id = 2 callRequestVote Lock
+2022/09/22 16:53:19 id = 1 GetState Lock
+2022/09/22 16:53:19 id = 2 GetState Lock
+2022/09/22 16:53:19 leader is 1
+2022/09/22 16:53:19 id = 0 become follower setNewTerm 8
+2022/09/22 16:53:19 id = 2 callRequestVote Lock
+2022/09/22 16:53:19 id 0 get heartbeat from 1
+2022/09/22 16:53:19 id = 0 GetState Lock
+2022/09/22 16:53:19 id = 1 GetState Lock
+2022/09/22 16:53:19 id = 2 GetState Lock
+2022/09/22 16:53:19 leader is 1
+  ... Passed --   5.0  3  120   25710    0
+2022/09/22 16:53:19 0 killed
+2022/09/22 16:53:19 1 killed
+2022/09/22 16:53:19 2 killed
+Test (2A): multiple elections ...
+2022/09/22 16:53:19 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 3 long time no heartbeat
+2022/09/22 16:53:20 id = 3 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 3
+2022/09/22 16:53:20 id = 6 become follower setNewTerm 1
+2022/09/22 16:53:20 6 vote to 3
+2022/09/22 16:53:20 id = 3 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 long time no heartbeat
+2022/09/22 16:53:20 id = 4 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 4
+2022/09/22 16:53:20 6 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 long time no heartbeat
+2022/09/22 16:53:20 id = 5 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 5
+2022/09/22 16:53:20 6 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 long time no heartbeat
+2022/09/22 16:53:20 id = 0 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 0
+2022/09/22 16:53:20 6 no vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 long time no heartbeat
+2022/09/22 16:53:20 id = 2 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 2
+2022/09/22 16:53:20 6 no vote to 2
+2022/09/22 16:53:20 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 RequestVote Lock
+2022/09/22 16:53:20 0 rece 3
+2022/09/22 16:53:20 0 no vote to 3
+2022/09/22 16:53:20 id = 3 callRequestVote Lock
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 3
+2022/09/22 16:53:20 id = 1 become follower setNewTerm 1
+2022/09/22 16:53:20 1 vote to 3
+2022/09/22 16:53:20 id = 3 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 RequestVote Lock
+2022/09/22 16:53:20 2 rece 3
+2022/09/22 16:53:20 2 no vote to 3
+2022/09/22 16:53:20 id = 3 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 RequestVote Lock
+2022/09/22 16:53:20 4 rece 3
+2022/09/22 16:53:20 4 no vote to 3
+2022/09/22 16:53:20 id = 3 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 RequestVote Lock
+2022/09/22 16:53:20 5 rece 3
+2022/09/22 16:53:20 5 no vote to 3
+2022/09/22 16:53:20 id = 3 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 RequestVote Lock
+2022/09/22 16:53:20 0 rece 4
+2022/09/22 16:53:20 0 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 4
+2022/09/22 16:53:20 1 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 RequestVote Lock
+2022/09/22 16:53:20 2 rece 4
+2022/09/22 16:53:20 2 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 3 RequestVote Lock
+2022/09/22 16:53:20 3 rece 4
+2022/09/22 16:53:20 3 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 RequestVote Lock
+2022/09/22 16:53:20 5 rece 4
+2022/09/22 16:53:20 5 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 RequestVote Lock
+2022/09/22 16:53:20 0 rece 5
+2022/09/22 16:53:20 0 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 5
+2022/09/22 16:53:20 1 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 RequestVote Lock
+2022/09/22 16:53:20 2 rece 5
+2022/09/22 16:53:20 2 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 3 RequestVote Lock
+2022/09/22 16:53:20 3 rece 5
+2022/09/22 16:53:20 3 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 RequestVote Lock
+2022/09/22 16:53:20 4 rece 5
+2022/09/22 16:53:20 4 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 0
+2022/09/22 16:53:20 1 no vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 RequestVote Lock
+2022/09/22 16:53:20 2 rece 0
+2022/09/22 16:53:20 2 no vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 3 RequestVote Lock
+2022/09/22 16:53:20 3 rece 0
+2022/09/22 16:53:20 3 no vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 RequestVote Lock
+2022/09/22 16:53:20 4 rece 0
+2022/09/22 16:53:20 4 no vote to 0
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 2
+2022/09/22 16:53:20 1 no vote to 2
+2022/09/22 16:53:20 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 RequestVote Lock
+2022/09/22 16:53:20 5 rece 0
+2022/09/22 16:53:20 5 no vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 RequestVote Lock
+2022/09/22 16:53:20 0 rece 2
+2022/09/22 16:53:20 0 no vote to 2
+2022/09/22 16:53:20 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 RequestVote Lock
+2022/09/22 16:53:20 4 rece 2
+2022/09/22 16:53:20 4 no vote to 2
+2022/09/22 16:53:20 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 3 RequestVote Lock
+2022/09/22 16:53:20 3 rece 2
+2022/09/22 16:53:20 3 no vote to 2
+2022/09/22 16:53:20 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 RequestVote Lock
+2022/09/22 16:53:20 5 rece 2
+2022/09/22 16:53:20 5 no vote to 2
+2022/09/22 16:53:20 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 GetState Lock
+2022/09/22 16:53:20 id = 1 GetState Lock
+2022/09/22 16:53:20 id = 2 GetState Lock
+2022/09/22 16:53:20 id = 3 GetState Lock
+2022/09/22 16:53:20 id = 4 GetState Lock
+2022/09/22 16:53:20 id = 5 GetState Lock
+2022/09/22 16:53:20 id = 6 GetState Lock
+2022/09/22 16:53:20 id = 1 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 no one become lead
+2022/09/22 16:53:20 id = 0 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 0
+2022/09/22 16:53:20 id = 6 become follower setNewTerm 2
+2022/09/22 16:53:20 6 vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 no one become lead
+2022/09/22 16:53:20 id = 4 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 4
+2022/09/22 16:53:20 6 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 no one become lead
+2022/09/22 16:53:20 id = 5 voteforme
+2022/09/22 16:53:20 id = 6 RequestVote Lock
+2022/09/22 16:53:20 6 rece 5
+2022/09/22 16:53:20 6 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 0
+2022/09/22 16:53:20 id = 1 become follower setNewTerm 2
+2022/09/22 16:53:20 1 vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 RequestVote Lock
+2022/09/22 16:53:20 2 rece 0
+2022/09/22 16:53:20 id = 2 become follower setNewTerm 2
+2022/09/22 16:53:20 2 vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 im 0 leader
+2022/09/22 16:53:20 id = 3 RequestVote Lock
+2022/09/22 16:53:20 3 rece 0
+2022/09/22 16:53:20 id = 3 become follower setNewTerm 2
+2022/09/22 16:53:20 3 vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 RequestVote Lock
+2022/09/22 16:53:20 4 rece 0
+2022/09/22 16:53:20 4 no vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 RequestVote Lock
+2022/09/22 16:53:20 5 rece 0
+2022/09/22 16:53:20 5 no vote to 0
+2022/09/22 16:53:20 id = 0 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 RequestVote Lock
+2022/09/22 16:53:20 0 rece 4
+2022/09/22 16:53:20 0 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 4
+2022/09/22 16:53:20 1 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 RequestVote Lock
+2022/09/22 16:53:20 2 rece 4
+2022/09/22 16:53:20 2 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 3 RequestVote Lock
+2022/09/22 16:53:20 3 rece 4
+2022/09/22 16:53:20 3 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 5 RequestVote Lock
+2022/09/22 16:53:20 5 rece 4
+2022/09/22 16:53:20 5 no vote to 4
+2022/09/22 16:53:20 id = 4 callRequestVote Lock
+2022/09/22 16:53:20 id = 0 RequestVote Lock
+2022/09/22 16:53:20 0 rece 5
+2022/09/22 16:53:20 0 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 1 RequestVote Lock
+2022/09/22 16:53:20 1 rece 5
+2022/09/22 16:53:20 1 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 2 RequestVote Lock
+2022/09/22 16:53:20 2 rece 5
+2022/09/22 16:53:20 2 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 3 RequestVote Lock
+2022/09/22 16:53:20 3 rece 5
+2022/09/22 16:53:20 3 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id = 4 RequestVote Lock
+2022/09/22 16:53:20 4 rece 5
+2022/09/22 16:53:20 4 no vote to 5
+2022/09/22 16:53:20 id = 5 callRequestVote Lock
+2022/09/22 16:53:20 id 6 get heartbeat from 0
+2022/09/22 16:53:20 id = 0 GetState Lock
+2022/09/22 16:53:20 id = 1 GetState Lock
+2022/09/22 16:53:20 id = 2 GetState Lock
+2022/09/22 16:53:20 id = 3 GetState Lock
+2022/09/22 16:53:20 id = 4 GetState Lock
+2022/09/22 16:53:20 id = 5 GetState Lock
+2022/09/22 16:53:20 id = 6 GetState Lock
+2022/09/22 16:53:20 leader is 0
+2022/09/22 16:53:20 iters = 1 | 3 6 0 offline
+2022/09/22 16:53:21 id = 5 long time no heartbeat
+2022/09/22 16:53:21 id = 5 voteforme
+2022/09/22 16:53:21 id = 2 long time no heartbeat
+2022/09/22 16:53:21 id = 2 voteforme
+2022/09/22 16:53:21 id = 3 long time no heartbeat
+2022/09/22 16:53:21 id = 3 voteforme
+2022/09/22 16:53:21 id = 6 long time no heartbeat
+2022/09/22 16:53:21 id = 6 voteforme
+2022/09/22 16:53:21 id = 1 RequestVote Lock
+2022/09/22 16:53:21 1 rece 5
+2022/09/22 16:53:21 id = 1 become follower setNewTerm 3
+2022/09/22 16:53:21 1 vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 2 RequestVote Lock
+2022/09/22 16:53:21 2 rece 5
+2022/09/22 16:53:21 2 no vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 4 RequestVote Lock
+2022/09/22 16:53:21 4 rece 5
+2022/09/22 16:53:21 id = 4 become follower setNewTerm 3
+2022/09/22 16:53:21 4 vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 1 RequestVote Lock
+2022/09/22 16:53:21 1 rece 2
+2022/09/22 16:53:21 1 no vote to 2
+2022/09/22 16:53:21 id = 2 callRequestVote Lock
+2022/09/22 16:53:21 id = 4 RequestVote Lock
+2022/09/22 16:53:21 4 rece 2
+2022/09/22 16:53:21 4 no vote to 2
+2022/09/22 16:53:21 id = 2 callRequestVote Lock
+2022/09/22 16:53:21 id = 5 RequestVote Lock
+2022/09/22 16:53:21 5 rece 2
+2022/09/22 16:53:21 5 no vote to 2
+2022/09/22 16:53:21 id = 2 callRequestVote Lock
+2022/09/22 16:53:21 id = 1 GetState Lock
+2022/09/22 16:53:21 id = 2 GetState Lock
+2022/09/22 16:53:21 id = 4 GetState Lock
+2022/09/22 16:53:21 id = 5 GetState Lock
+2022/09/22 16:53:21 id = 0 callRequestVote Lock
+2022/09/22 16:53:21 id = 4 long time no heartbeat
+2022/09/22 16:53:21 id = 4 voteforme
+2022/09/22 16:53:21 id = 1 RequestVote Lock
+2022/09/22 16:53:21 1 rece 4
+2022/09/22 16:53:21 id = 1 become follower setNewTerm 4
+2022/09/22 16:53:21 1 vote to 4
+2022/09/22 16:53:21 id = 4 callRequestVote Lock
+2022/09/22 16:53:21 id = 2 RequestVote Lock
+2022/09/22 16:53:21 2 rece 4
+2022/09/22 16:53:21 id = 2 become follower setNewTerm 4
+2022/09/22 16:53:21 2 vote to 4
+2022/09/22 16:53:21 id = 4 callRequestVote Lock
+2022/09/22 16:53:21 id = 5 no one become lead
+2022/09/22 16:53:21 id = 5 voteforme
+2022/09/22 16:53:21 id = 1 RequestVote Lock
+2022/09/22 16:53:21 1 rece 5
+2022/09/22 16:53:21 1 no vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 2 RequestVote Lock
+2022/09/22 16:53:21 2 rece 5
+2022/09/22 16:53:21 2 no vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 4 RequestVote Lock
+2022/09/22 16:53:21 4 rece 5
+2022/09/22 16:53:21 4 no vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 5 RequestVote Lock
+2022/09/22 16:53:21 5 rece 4
+2022/09/22 16:53:21 5 no vote to 4
+2022/09/22 16:53:21 id = 4 callRequestVote Lock
+2022/09/22 16:53:21 id = 3 no one become lead
+2022/09/22 16:53:21 id = 3 voteforme
+2022/09/22 16:53:21 id = 6 no one become lead
+2022/09/22 16:53:21 id = 6 voteforme
+2022/09/22 16:53:21 id = 1 GetState Lock
+2022/09/22 16:53:21 id = 2 GetState Lock
+2022/09/22 16:53:21 id = 4 GetState Lock
+2022/09/22 16:53:21 id = 5 GetState Lock
+2022/09/22 16:53:21 id = 5 no one become lead
+2022/09/22 16:53:21 id = 5 voteforme
+2022/09/22 16:53:21 id = 1 long time no heartbeat
+2022/09/22 16:53:21 id = 1 voteforme
+2022/09/22 16:53:21 id = 2 long time no heartbeat
+2022/09/22 16:53:21 id = 2 voteforme
+2022/09/22 16:53:21 id = 1 RequestVote Lock
+2022/09/22 16:53:21 1 rece 5
+2022/09/22 16:53:21 1 no vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 2 RequestVote Lock
+2022/09/22 16:53:21 2 rece 5
+2022/09/22 16:53:21 2 no vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 4 RequestVote Lock
+2022/09/22 16:53:21 4 rece 5
+2022/09/22 16:53:21 id = 4 become follower setNewTerm 5
+2022/09/22 16:53:21 4 vote to 5
+2022/09/22 16:53:21 id = 5 callRequestVote Lock
+2022/09/22 16:53:21 id = 2 RequestVote Lock
+2022/09/22 16:53:21 2 rece 1
+2022/09/22 16:53:21 2 no vote to 1
+2022/09/22 16:53:21 id = 1 callRequestVote Lock
+2022/09/22 16:53:21 id = 4 RequestVote Lock
+2022/09/22 16:53:21 4 rece 1
+2022/09/22 16:53:21 4 no vote to 1
+2022/09/22 16:53:21 id = 1 callRequestVote Lock
+2022/09/22 16:53:21 id = 5 RequestVote Lock
+2022/09/22 16:53:21 5 rece 1
+2022/09/22 16:53:21 5 no vote to 1
+2022/09/22 16:53:21 id = 1 callRequestVote Lock
+2022/09/22 16:53:21 id = 1 RequestVote Lock
+2022/09/22 16:53:21 1 rece 2
+2022/09/22 16:53:21 1 no vote to 2
+2022/09/22 16:53:21 id = 2 callRequestVote Lock
+2022/09/22 16:53:21 id = 5 RequestVote Lock
+2022/09/22 16:53:21 5 rece 2
+2022/09/22 16:53:21 5 no vote to 2
+2022/09/22 16:53:21 id = 2 callRequestVote Lock
+2022/09/22 16:53:21 id = 4 RequestVote Lock
+2022/09/22 16:53:21 4 rece 2
+2022/09/22 16:53:21 4 no vote to 2
+2022/09/22 16:53:21 id = 2 callRequestVote Lock
+2022/09/22 16:53:21 id = 1 callRequestVote Lock
+2022/09/22 16:53:21 id = 6 no one become lead
+2022/09/22 16:53:21 id = 6 voteforme
+2022/09/22 16:53:21 id = 3 no one become lead
+2022/09/22 16:53:21 id = 3 voteforme
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 3 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 1 GetState Lock
+2022/09/22 16:53:22 id = 2 GetState Lock
+2022/09/22 16:53:22 id = 4 GetState Lock
+2022/09/22 16:53:22 id = 5 GetState Lock
+2022/09/22 16:53:22 id = 3 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 no one become lead
+2022/09/22 16:53:22 id = 2 voteforme
+2022/09/22 16:53:22 id = 1 no one become lead
+2022/09/22 16:53:22 id = 1 voteforme
+2022/09/22 16:53:22 id = 1 RequestVote Lock
+2022/09/22 16:53:22 1 rece 2
+2022/09/22 16:53:22 1 no vote to 2
+2022/09/22 16:53:22 id = 4 long time no heartbeat
+2022/09/22 16:53:22 id = 4 voteforme
+2022/09/22 16:53:22 id = 4 RequestVote Lock
+2022/09/22 16:53:22 4 rece 2
+2022/09/22 16:53:22 4 no vote to 2
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 5 RequestVote Lock
+2022/09/22 16:53:22 5 rece 2
+2022/09/22 16:53:22 id = 5 become follower setNewTerm 6
+2022/09/22 16:53:22 5 vote to 2
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 RequestVote Lock
+2022/09/22 16:53:22 2 rece 1
+2022/09/22 16:53:22 2 no vote to 1
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 4 RequestVote Lock
+2022/09/22 16:53:22 4 rece 1
+2022/09/22 16:53:22 4 no vote to 1
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 5 RequestVote Lock
+2022/09/22 16:53:22 5 rece 1
+2022/09/22 16:53:22 5 no vote to 1
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 1 RequestVote Lock
+2022/09/22 16:53:22 1 rece 4
+2022/09/22 16:53:22 1 no vote to 4
+2022/09/22 16:53:22 id = 4 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 RequestVote Lock
+2022/09/22 16:53:22 2 rece 4
+2022/09/22 16:53:22 2 no vote to 4
+2022/09/22 16:53:22 id = 4 callRequestVote Lock
+2022/09/22 16:53:22 id = 5 RequestVote Lock
+2022/09/22 16:53:22 5 rece 4
+2022/09/22 16:53:22 5 no vote to 4
+2022/09/22 16:53:22 id = 4 callRequestVote Lock
+2022/09/22 16:53:22 id = 6 no one become lead
+2022/09/22 16:53:22 id = 6 voteforme
+2022/09/22 16:53:22 id = 3 callRequestVote Lock
+2022/09/22 16:53:22 id = 3 no one become lead
+2022/09/22 16:53:22 id = 3 voteforme
+2022/09/22 16:53:22 id = 1 GetState Lock
+2022/09/22 16:53:22 id = 2 GetState Lock
+2022/09/22 16:53:22 id = 4 GetState Lock
+2022/09/22 16:53:22 id = 5 GetState Lock
+2022/09/22 16:53:22 id = 6 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 no one become lead
+2022/09/22 16:53:22 id = 2 voteforme
+2022/09/22 16:53:22 id = 1 no one become lead
+2022/09/22 16:53:22 id = 1 voteforme
+2022/09/22 16:53:22 id = 5 long time no heartbeat
+2022/09/22 16:53:22 id = 5 voteforme
+2022/09/22 16:53:22 id = 1 RequestVote Lock
+2022/09/22 16:53:22 1 rece 2
+2022/09/22 16:53:22 1 no vote to 2
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 4 RequestVote Lock
+2022/09/22 16:53:22 4 rece 2
+2022/09/22 16:53:22 id = 4 become follower setNewTerm 7
+2022/09/22 16:53:22 4 vote to 2
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 5 RequestVote Lock
+2022/09/22 16:53:22 5 rece 2
+2022/09/22 16:53:22 5 no vote to 2
+2022/09/22 16:53:22 id = 2 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 RequestVote Lock
+2022/09/22 16:53:22 2 rece 1
+2022/09/22 16:53:22 2 no vote to 1
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 4 RequestVote Lock
+2022/09/22 16:53:22 4 rece 1
+2022/09/22 16:53:22 4 no vote to 1
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 5 RequestVote Lock
+2022/09/22 16:53:22 5 rece 1
+2022/09/22 16:53:22 5 no vote to 1
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 1 RequestVote Lock
+2022/09/22 16:53:22 1 rece 5
+2022/09/22 16:53:22 1 no vote to 5
+2022/09/22 16:53:22 id = 5 callRequestVote Lock
+2022/09/22 16:53:22 id = 2 RequestVote Lock
+2022/09/22 16:53:22 2 rece 5
+2022/09/22 16:53:22 2 no vote to 5
+2022/09/22 16:53:22 id = 5 callRequestVote Lock
+2022/09/22 16:53:22 id = 4 RequestVote Lock
+2022/09/22 16:53:22 4 rece 5
+2022/09/22 16:53:22 4 no vote to 5
+2022/09/22 16:53:22 id = 5 callRequestVote Lock
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 3 callRequestVote Lock
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 1 callRequestVote Lock
+2022/09/22 16:53:22 id = 6 no one become lead
+2022/09/22 16:53:22 id = 6 voteforme
+2022/09/22 16:53:22 id = 3 callRequestVote Lock
+2022/09/22 16:53:22 id = 6 callRequestVote Lock
+2022/09/22 16:53:22 id = 3 callRequestVote Lock
+2022/09/22 16:53:22 id = 5 callRequestVote Lock
+2022/09/22 16:53:22 id = 3 no one become lead
+2022/09/22 16:53:22 id = 3 voteforme
+2022/09/22 16:53:23 id = 1 callRequestVote Lock
+2022/09/22 16:53:23 id = 6 callRequestVote Lock
+2022/09/22 16:53:23 id = 1 GetState Lock
+2022/09/22 16:53:23 id = 2 GetState Lock
+2022/09/22 16:53:23 id = 4 GetState Lock
+2022/09/22 16:53:23 id = 5 GetState Lock
+2022/09/22 16:53:23 id = 5 callRequestVote Lock
+2022/09/22 16:53:23 id = 3 callRequestVote Lock
+2022/09/22 16:53:23 id = 1 no one become lead
+2022/09/22 16:53:23 id = 1 voteforme
+2022/09/22 16:53:23 id = 5 no one become lead
+2022/09/22 16:53:23 id = 5 voteforme
+2022/09/22 16:53:23 id = 2 RequestVote Lock
+2022/09/22 16:53:23 2 rece 1
+2022/09/22 16:53:23 id = 2 become follower setNewTerm 8
+2022/09/22 16:53:23 2 vote to 1
+2022/09/22 16:53:23 id = 1 callRequestVote Lock
+2022/09/22 16:53:23 id = 4 RequestVote Lock
+2022/09/22 16:53:23 4 rece 1
+2022/09/22 16:53:23 id = 4 become follower setNewTerm 8
+2022/09/22 16:53:23 4 vote to 1
+2022/09/22 16:53:23 id = 1 callRequestVote Lock
+2022/09/22 16:53:23 id = 4 RequestVote Lock
+2022/09/22 16:53:23 4 rece 5
+2022/09/22 16:53:23 4 no vote to 5
+2022/09/22 16:53:23 id = 5 RequestVote Lock
+2022/09/22 16:53:23 5 rece 1
+2022/09/22 16:53:23 5 no vote to 1
+2022/09/22 16:53:23 id = 1 callRequestVote Lock
+2022/09/22 16:53:23 id = 1 RequestVote Lock
+2022/09/22 16:53:23 1 rece 5
+2022/09/22 16:53:23 1 no vote to 5
+2022/09/22 16:53:23 id = 5 callRequestVote Lock
+2022/09/22 16:53:23 id = 2 RequestVote Lock
+2022/09/22 16:53:23 2 rece 5
+2022/09/22 16:53:23 2 no vote to 5
+2022/09/22 16:53:23 id = 5 callRequestVote Lock
+2022/09/22 16:53:23 id = 5 callRequestVote Lock
+2022/09/22 16:53:23 id = 6 callRequestVote Lock
+2022/09/22 16:53:23 id = 2 callRequestVote Lock
+2022/09/22 16:53:23 id = 6 no one become lead
+2022/09/22 16:53:23 id = 6 voteforme
+2022/09/22 16:53:23 id = 3 no one become lead
+2022/09/22 16:53:23 id = 3 voteforme
+2022/09/22 16:53:23 id = 1 GetState Lock
+2022/09/22 16:53:23 id = 2 GetState Lock
+2022/09/22 16:53:23 id = 4 GetState Lock
+2022/09/22 16:53:23 id = 5 GetState Lock
+2022/09/22 16:53:23 id = 3 callRequestVote Lock
+2022/09/22 16:53:23 id = 5 callRequestVote Lock
+2022/09/22 16:53:23 id = 6 callRequestVote Lock
+2022/09/22 16:53:23 id = 3 callRequestVote Lock
+2022/09/22 16:53:23 id = 2 long time no heartbeat
+2022/09/22 16:53:23 id = 2 voteforme
+2022/09/22 16:53:23 id = 4 long time no heartbeat
+2022/09/22 16:53:23 id = 4 voteforme
+2022/09/22 16:53:23 id = 5 RequestVote Lock
+2022/09/22 16:53:23 5 rece 4
+2022/09/22 16:53:23 id = 5 become follower setNewTerm 9
+2022/09/22 16:53:23 5 vote to 4
+2022/09/22 16:53:23 id = 4 callRequestVote Lock
+2022/09/22 16:53:23 id = 1 RequestVote Lock
+2022/09/22 16:53:23 1 rece 2
+2022/09/22 16:53:23 id = 1 become follower setNewTerm 9
+2022/09/22 16:53:23 1 vote to 2
+2022/09/22 16:53:23 id = 2 callRequestVote Lock
+2022/09/22 16:53:23 id = 4 RequestVote Lock
+2022/09/22 16:53:23 4 rece 2
+2022/09/22 16:53:23 4 no vote to 2
+2022/09/22 16:53:23 id = 2 callRequestVote Lock
+2022/09/22 16:53:23 id = 5 RequestVote Lock
+2022/09/22 16:53:23 5 rece 2
+2022/09/22 16:53:23 5 no vote to 2
+2022/09/22 16:53:23 id = 2 callRequestVote Lock
+2022/09/22 16:53:23 id = 2 RequestVote Lock
+2022/09/22 16:53:23 2 rece 4
+2022/09/22 16:53:23 2 no vote to 4
+2022/09/22 16:53:23 id = 4 callRequestVote Lock
+2022/09/22 16:53:23 id = 1 RequestVote Lock
+2022/09/22 16:53:23 1 rece 4
+2022/09/22 16:53:23 1 no vote to 4
+2022/09/22 16:53:23 id = 4 callRequestVote Lock
+2022/09/22 16:53:23 id = 5 callRequestVote Lock
+2022/09/22 16:53:23 id = 6 no one become lead
+2022/09/22 16:53:23 id = 6 voteforme
+2022/09/22 16:53:23 id = 1 callRequestVote Lock
+2022/09/22 16:53:23 id = 1 callRequestVote Lock
+2022/09/22 16:53:23 id = 2 callRequestVote Lock
+2022/09/22 16:53:23 id = 6 callRequestVote Lock
+2022/09/22 16:53:23 id = 6 callRequestVote Lock
+2022/09/22 16:53:23 id = 3 callRequestVote Lock
+2022/09/22 16:53:23 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 2 callRequestVote Lock
+2022/09/22 16:53:24 id = 6 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 long time no heartbeat
+2022/09/22 16:53:24 id = 1 voteforme
+2022/09/22 16:53:24 id = 3 no one become lead
+2022/09/22 16:53:24 id = 3 voteforme
+2022/09/22 16:53:24 id = 4 no one become lead
+2022/09/22 16:53:24 id = 4 voteforme
+2022/09/22 16:53:24 id = 2 RequestVote Lock
+2022/09/22 16:53:24 2 rece 1
+2022/09/22 16:53:24 id = 2 become follower setNewTerm 10
+2022/09/22 16:53:24 2 vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 4 RequestVote Lock
+2022/09/22 16:53:24 4 rece 1
+2022/09/22 16:53:24 4 no vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 5 RequestVote Lock
+2022/09/22 16:53:24 5 rece 1
+2022/09/22 16:53:24 id = 5 become follower setNewTerm 10
+2022/09/22 16:53:24 5 vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 RequestVote Lock
+2022/09/22 16:53:24 1 rece 4
+2022/09/22 16:53:24 1 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 2 RequestVote Lock
+2022/09/22 16:53:24 2 rece 4
+2022/09/22 16:53:24 2 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 5 RequestVote Lock
+2022/09/22 16:53:24 5 rece 4
+2022/09/22 16:53:24 5 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 GetState Lock
+2022/09/22 16:53:24 id = 2 GetState Lock
+2022/09/22 16:53:24 id = 4 GetState Lock
+2022/09/22 16:53:24 id = 5 GetState Lock
+2022/09/22 16:53:24 id = 3 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 6 callRequestVote Lock
+2022/09/22 16:53:24 id = 2 callRequestVote Lock
+2022/09/22 16:53:24 id = 6 no one become lead
+2022/09/22 16:53:24 id = 6 voteforme
+2022/09/22 16:53:24 id = 3 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 no one become lead
+2022/09/22 16:53:24 id = 1 voteforme
+2022/09/22 16:53:24 id = 4 no one become lead
+2022/09/22 16:53:24 id = 4 voteforme
+2022/09/22 16:53:24 id = 2 RequestVote Lock
+2022/09/22 16:53:24 2 rece 1
+2022/09/22 16:53:24 id = 2 become follower setNewTerm 11
+2022/09/22 16:53:24 2 vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 5 long time no heartbeat
+2022/09/22 16:53:24 id = 5 voteforme
+2022/09/22 16:53:24 id = 4 RequestVote Lock
+2022/09/22 16:53:24 4 rece 1
+2022/09/22 16:53:24 4 no vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 5 RequestVote Lock
+2022/09/22 16:53:24 5 rece 1
+2022/09/22 16:53:24 5 no vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 RequestVote Lock
+2022/09/22 16:53:24 1 rece 4
+2022/09/22 16:53:24 1 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 2 RequestVote Lock
+2022/09/22 16:53:24 2 rece 4
+2022/09/22 16:53:24 2 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 5 RequestVote Lock
+2022/09/22 16:53:24 5 rece 4
+2022/09/22 16:53:24 5 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 RequestVote Lock
+2022/09/22 16:53:24 1 rece 5
+2022/09/22 16:53:24 1 no vote to 5
+2022/09/22 16:53:24 id = 5 callRequestVote Lock
+2022/09/22 16:53:24 id = 2 RequestVote Lock
+2022/09/22 16:53:24 2 rece 5
+2022/09/22 16:53:24 2 no vote to 5
+2022/09/22 16:53:24 id = 5 callRequestVote Lock
+2022/09/22 16:53:24 id = 4 RequestVote Lock
+2022/09/22 16:53:24 4 rece 5
+2022/09/22 16:53:24 4 no vote to 5
+2022/09/22 16:53:24 id = 5 callRequestVote Lock
+2022/09/22 16:53:24 id = 3 callRequestVote Lock
+2022/09/22 16:53:24 id = 3 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 GetState Lock
+2022/09/22 16:53:24 id = 2 GetState Lock
+2022/09/22 16:53:24 id = 4 GetState Lock
+2022/09/22 16:53:24 id = 5 GetState Lock
+2022/09/22 16:53:24 id = 5 callRequestVote Lock
+2022/09/22 16:53:24 id = 3 no one become lead
+2022/09/22 16:53:24 id = 3 voteforme
+2022/09/22 16:53:24 id = 6 callRequestVote Lock
+2022/09/22 16:53:24 id = 2 callRequestVote Lock
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 6 callRequestVote Lock
+2022/09/22 16:53:24 id = 5 callRequestVote Lock
+2022/09/22 16:53:24 id = 3 callRequestVote Lock
+2022/09/22 16:53:24 id = 6 callRequestVote Lock
+2022/09/22 16:53:24 id = 6 no one become lead
+2022/09/22 16:53:24 id = 6 voteforme
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 3 callRequestVote Lock
+2022/09/22 16:53:24 id = 4 no one become lead
+2022/09/22 16:53:24 id = 4 voteforme
+2022/09/22 16:53:24 id = 1 no one become lead
+2022/09/22 16:53:24 id = 1 voteforme
+2022/09/22 16:53:24 id = 5 RequestVote Lock
+2022/09/22 16:53:24 5 rece 4
+2022/09/22 16:53:24 id = 5 become follower setNewTerm 12
+2022/09/22 16:53:24 5 vote to 4
+2022/09/22 16:53:24 id = 2 RequestVote Lock
+2022/09/22 16:53:24 2 rece 1
+2022/09/22 16:53:24 id = 2 become follower setNewTerm 12
+2022/09/22 16:53:24 2 vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 4 RequestVote Lock
+2022/09/22 16:53:24 4 rece 1
+2022/09/22 16:53:24 4 no vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 5 RequestVote Lock
+2022/09/22 16:53:24 5 rece 1
+2022/09/22 16:53:24 5 no vote to 1
+2022/09/22 16:53:24 id = 1 callRequestVote Lock
+2022/09/22 16:53:24 id = 1 RequestVote Lock
+2022/09/22 16:53:24 1 rece 4
+2022/09/22 16:53:24 1 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 2 RequestVote Lock
+2022/09/22 16:53:24 2 rece 4
+2022/09/22 16:53:24 2 no vote to 4
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:24 id = 4 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 1 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 2 callRequestVote Lock
+2022/09/22 16:53:25 id = 1 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 1 GetState Lock
+2022/09/22 16:53:25 id = 2 GetState Lock
+2022/09/22 16:53:25 id = 4 GetState Lock
+2022/09/22 16:53:25 id = 5 GetState Lock
+2022/09/22 16:53:25 id = 3 no one become lead
+2022/09/22 16:53:25 id = 3 voteforme
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 2 callRequestVote Lock
+2022/09/22 16:53:25 id = 3 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 no one become lead
+2022/09/22 16:53:25 id = 6 voteforme
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 3 callRequestVote Lock
+2022/09/22 16:53:25 id = 4 no one become lead
+2022/09/22 16:53:25 id = 4 voteforme
+2022/09/22 16:53:25 id = 2 long time no heartbeat
+2022/09/22 16:53:25 id = 2 voteforme
+2022/09/22 16:53:25 id = 1 no one become lead
+2022/09/22 16:53:25 id = 1 voteforme
+2022/09/22 16:53:25 id = 5 RequestVote Lock
+2022/09/22 16:53:25 5 rece 2
+2022/09/22 16:53:25 id = 5 become follower setNewTerm 13
+2022/09/22 16:53:25 5 vote to 2
+2022/09/22 16:53:25 id = 2 RequestVote Lock
+2022/09/22 16:53:25 2 rece 1
+2022/09/22 16:53:25 2 no vote to 1
+2022/09/22 16:53:25 id = 1 callRequestVote Lock
+2022/09/22 16:53:25 id = 4 RequestVote Lock
+2022/09/22 16:53:25 4 rece 1
+2022/09/22 16:53:25 4 no vote to 1
+2022/09/22 16:53:25 id = 1 callRequestVote Lock
+2022/09/22 16:53:25 id = 5 RequestVote Lock
+2022/09/22 16:53:25 5 rece 1
+2022/09/22 16:53:25 5 no vote to 1
+2022/09/22 16:53:25 id = 1 callRequestVote Lock
+2022/09/22 16:53:25 id = 1 RequestVote Lock
+2022/09/22 16:53:25 1 rece 4
+2022/09/22 16:53:25 1 no vote to 4
+2022/09/22 16:53:25 id = 4 callRequestVote Lock
+2022/09/22 16:53:25 id = 2 RequestVote Lock
+2022/09/22 16:53:25 2 rece 4
+2022/09/22 16:53:25 2 no vote to 4
+2022/09/22 16:53:25 id = 4 callRequestVote Lock
+2022/09/22 16:53:25 id = 5 RequestVote Lock
+2022/09/22 16:53:25 5 rece 4
+2022/09/22 16:53:25 5 no vote to 4
+2022/09/22 16:53:25 id = 4 callRequestVote Lock
+2022/09/22 16:53:25 id = 1 RequestVote Lock
+2022/09/22 16:53:25 1 rece 2
+2022/09/22 16:53:25 1 no vote to 2
+2022/09/22 16:53:25 id = 2 callRequestVote Lock
+2022/09/22 16:53:25 id = 4 RequestVote Lock
+2022/09/22 16:53:25 id = 2 callRequestVote Lock
+2022/09/22 16:53:25 4 rece 2
+2022/09/22 16:53:25 4 no vote to 2
+2022/09/22 16:53:25 id = 2 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 3 callRequestVote Lock
+2022/09/22 16:53:25 id = 1 callRequestVote Lock
+2022/09/22 16:53:25 id = 6 callRequestVote Lock
+2022/09/22 16:53:25 id = 5 callRequestVote Lock
+2022/09/22 16:53:25 id = 1 GetState Lock
+2022/09/22 16:53:25 id = 2 GetState Lock
+2022/09/22 16:53:25 id = 4 GetState Lock
+2022/09/22 16:53:25 id = 5 GetState Lock
+2022/09/22 16:53:25 0 killed
+2022/09/22 16:53:25 1 killed
+2022/09/22 16:53:25 2 killed
+2022/09/22 16:53:25 3 killed
+2022/09/22 16:53:25 4 killed
+2022/09/22 16:53:25 5 killed
+2022/09/22 16:53:25 6 killed
+--- FAIL: TestManyElections2A (6.04s)
+    config.go:465: expected one leader, got none
+FAIL
+exit status 1
+FAIL	6.824/raft	14.062s
